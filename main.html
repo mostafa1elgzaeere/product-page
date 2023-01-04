@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Font Awesome -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- MDB -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.0.1/mdb.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <!-- Container wrapper -->
+        <div class="container-fluid">
+          <!-- Toggle button -->
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-mdb-toggle="collapse"
+            data-mdb-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <i class="fas fa-bars"></i>
+          </button>
+
+          <!-- Collapsible wrapper -->
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <!-- Navbar brand -->
+            <a class="font-weight-bold navbar-brand mt-2 mt-lg-0" href="#">
+              Sneakers
+            </a>
+            <!-- Left links -->
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="#">Collection</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Men</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Women</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Contact</a>
+              </li>
+            </ul>
+            <!-- Left links -->
+          </div>
+          <!-- Collapsible wrapper -->
+
+          <!-- Right elements -->
+          <div class="d-flex align-items-center right-side-nav">
+            <!-- Icon -->
+            <a class="text-reset me-3" href="#">
+              <i id="cart" class="fas fa-shopping-cart"></i>
+
+              <!-- Cart -->
+              <div class="cart-items">
+                <div class="cart-header hide">
+                  <h5>Cart</h5>
+                </div>
+                <div class="cart-content-items hide">
+                  <h5 id="is-empty">Your Cart is Empty</h5>
+
+                  <div id="not-empty">
+                    <div class="row-elements">
+                      <img src="./images/image-product-1.jpg" alt="" />
+                      <div class="details">
+                        <p>Fall Limited Edition Sneakers</p>
+                        <p class="item-price">
+                          $125.00
+                          <span
+                            ><i class="fa-sharp fa-solid fa-xmark"></i
+                          ></span>
+                          <span class="count-items" id="count-in-cart">0</span>
+                          <span class="total-price px-2">0</span>
+                        </p>
+                      </div>
+                      <i class="fa-solid fa-trash" id="delete"></i>
+                    </div>
+                    <div class="checkout">
+                      <button class="btn w-100 my-3">Checkout</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+            <!-- Avatar -->
+            <div>
+              <a>
+                <img
+                  src="images/image-avatar.png"
+                  class="rounded-circle"
+                  height="40"
+                  id="profile"
+                  alt="Black and White Portrait of a Man"
+                  loading="lazy"
+                />
+              </a>
+            </div>
+          </div>
+          <!-- Right elements -->
+        </div>
+        <!-- Container wrapper -->
+      </nav>
+    </header>
+    <!-- Navbar -->
+
+    <div class="main container">
+      <div class="row">
+        <div class="left-side col-12 col-md-6">
+          <div class="left-side-up">
+            <img
+              src="images/image-product-1.jpg"
+              id="image-mobile"
+              width="100%"
+            />
+          </div>
+          <div class="cursors">
+            <p
+              class="text-dark btn btn-light rounded-circle"
+              id="dsk-modal-prev"
+            >
+              <i class="fa-solid fa-chevron-left"></i>
+            </p>
+            <p
+              class="text-dark btn btn-light rounded-circle"
+              id="dsk-modal-next"
+            >
+              <i class="fa-solid fa-chevron-right"></i>
+            </p>
+          </div>
+
+          <div class="images-small">
+            <img
+              data-mdb-toggle="modal"
+              data-mdb-target="#exampleModal"
+              src="images/image-product-1.jpg"
+              alt=""
+            />
+            <img
+              src="images/image-product-2.jpg"
+              data-mdb-toggle="modal"
+              data-mdb-target="#exampleModal"
+              alt=""
+            />
+
+            <img
+              src="images/image-product-3.jpg"
+              data-mdb-toggle="modal"
+              data-mdb-target="#exampleModal"
+              alt=""
+            />
+
+            <img
+              src="images/image-product-4.jpg"
+              data-mdb-toggle="modal"
+              data-mdb-target="#exampleModal"
+              alt=""
+            />
+          </div>
+        </div>
+
+        <div class="right-side my-3 col-12 col-md-5 col-lg-4">
+          <p>SNEAKER COMPANY</p>
+          <h2>Fall Limited Edition Sneakers</h2>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magnam
+            neque incidunt esse officia blanditiis! Molestiae rem velit ex
+            aperiam quibusdam esse eaque! Quod, ipsum ea.
+          </p>
+          <div class="price">
+            <h3>
+              $<span id="price-cost">125.00</span>
+              <span class="mx-2 my-2 h5">50%</span>
+            </h3>
+
+            <p class="my-2 text-secondary"><del>$250.00</del></p>
+          </div>
+
+          <div class="control-parent">
+            <div class="control d-flex">
+              <div class="minus btn btn-light">
+                <i class="fa-solid fa-minus"></i>
+              </div>
+              <p class="text-dark my-2 mx-4 count">0</p>
+              <div class="plus btn btn-light">
+                <i class="fa-solid fa-plus"></i>
+              </div>
+            </div>
+            <div class="add-to-cart mx-2 my-2">
+              <button class="btn btn-danger" id="add-to-cart">
+                <i class="fa-solid fa-cart-shopping px-1"></i> Add To Cart
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Modal -->
+        <div
+          class="modal fade"
+          id="exampleModal"
+          tabindex="-1"
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog">
+            <div class="modal-content bg-transparent">
+              <div class="modal-header">
+                <p
+                  type="button"
+                  class="text-light"
+                  data-mdb-dismiss="modal"
+                  aria-label="Close"
+                >
+                  X
+                </p>
+              </div>
+
+              <div class="modal-body">
+                <img
+                  id="modal_image"
+                  src="images/image-product-2.jpg"
+                  width="300px"
+                  height="20%"
+                  alt=""
+                />
+              </div>
+
+              <div class="modal-footer">
+                <div class="images-small images-small-two">
+                  <img src="images/image-product-1.jpg" alt="" />
+                  <img src="images/image-product-2.jpg" alt="" />
+                  <img src="images/image-product-3.jpg" alt="" />
+                  <img src="images/image-product-4.jpg" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.0.1/mdb.min.js"
+    ></script>
+  </body>
+</html>
